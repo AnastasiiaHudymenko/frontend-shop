@@ -1,6 +1,8 @@
 import { useState } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
 import { addUserData } from 'redux/operations';
+import { clearBacket } from 'redux/basketProductSlice';
 import { Form, Label, Field, NameInput, BtnSend } from './UserFrom.styled';
 
 export const UserForm = () => {
@@ -10,6 +12,9 @@ export const UserForm = () => {
     phone: '',
     address: '',
   });
+
+  const { backet } = useSelector(state => state.backet);
+  const dispatch = useDispatch();
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -22,7 +27,10 @@ export const UserForm = () => {
   const sendUserForm = e => {
     e.preventDefault();
 
-    addUserData(formData);
+    const userOrder = { backet, ...formData };
+    setFormData({ name: '', email: '', phone: '', address: '' });
+    addUserData(userOrder);
+    dispatch(clearBacket());
   };
 
   return (

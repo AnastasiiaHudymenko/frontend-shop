@@ -16,6 +16,7 @@ const Container = styled.div`
   padding: 20px 10px;
   gap: 30px;
   position: relative;
+  padding-top: 82px;
 `;
 
 export default ShopPage;

@@ -17,9 +17,17 @@ const basketSlice = createSlice({
     deleteProduct(state, { payload }) {
       state.backet = payload;
     },
+    clearBacket(state, { payload }) {
+      state.backet = [];
+    },
   },
 });
 
-export const { addProduct, addMoreProduct, deleteProduct, updateProduct } =
-  basketSlice.actions;
+export const {
+  addProduct,
+  addMoreProduct,
+  deleteProduct,
+  updateProduct,
+  clearBacket,
+} = basketSlice.actions;
 export const basketReducer = basketSlice.reducer;

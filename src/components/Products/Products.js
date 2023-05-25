@@ -31,6 +31,7 @@ export const Products = ({ changeShop }) => {
             src={`http://localhost:3002/${image}`}
             alt={title}
           />
+
           <Wrap>
             <Title>{title}</Title>
             <Btn onClick={() => handleClick(_id)} type="button">

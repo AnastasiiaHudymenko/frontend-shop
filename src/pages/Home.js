@@ -42,4 +42,5 @@ export const HomePage = () => {
 
 const Container = styled.div`
   display: flex;
+  padding-top: 64px;
 `;
