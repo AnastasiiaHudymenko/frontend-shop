@@ -26,3 +26,5 @@ export const Field = styled.input`
 export const NameInput = styled.p`
   margin: 0 0 5px 0;
 `;
+
+export const BtnSend = styled.button``;

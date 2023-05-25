@@ -15,6 +15,7 @@ const Container = styled.div`
   display: flex;
   padding: 20px 10px;
   gap: 30px;
+  position: relative;
 `;
 
 export default ShopPage;

@@ -15,3 +15,11 @@ export const getAllProducts = createAsyncThunk(
     }
   }
 );
+
+export const addUserData = async data => {
+  try {
+    await axios.post('users/order', data);
+  } catch (error) {
+    console.log(error);
+  }
+};

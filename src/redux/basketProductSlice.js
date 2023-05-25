@@ -4,7 +4,6 @@ const basketSlice = createSlice({
   name: 'backet',
   initialState: {
     backet: [],
-    orderBacket: [],
   },
   reducers: {
     addProduct(state, { payload }) {
@@ -15,7 +14,9 @@ const basketSlice = createSlice({
       state.backet = payload;
     },
 
-    deleteProduct(state, { payload }) {},
+    deleteProduct(state, { payload }) {
+      state.backet = payload;
+    },
   },
 });
 
