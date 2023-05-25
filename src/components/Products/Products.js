@@ -17,7 +17,8 @@ export const Products = ({ changeShop }) => {
   const handleClick = idCard => {
     const [findProduct] = products.filter(({ _id }) => _id === idCard);
 
-    dispatch(addProduct(findProduct));
+    const updateProduct = { ...findProduct, count: 1 };
+    dispatch(addProduct(updateProduct));
   };
 
   return (
@@ -25,7 +26,7 @@ export const Products = ({ changeShop }) => {
       {markup().map(({ _id, title, image }) => (
         <Item key={_id}>
           <Image
-            width={300}
+            width={250}
             height={250}
             src={`http://localhost:3002/${image}`}
             alt={title}

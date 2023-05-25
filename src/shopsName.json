@@ -1,5 +1,6 @@
 [
   { "id": 1, "name": "meat" },
   { "id": 2, "name": "vegan" },
-  { "id": 3, "name": "Yummy ball" }
+  { "id": 3, "name": "Yummy ball" },
+  { "id": 4, "name": "Back to all" }
 ]

@@ -6,7 +6,7 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 20px 0;
+  padding: 20px 10px;
 
   align-items: center;
 `;

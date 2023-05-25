@@ -24,6 +24,9 @@ export const HomePage = () => {
       case 3:
         setChangeShop('Yummy ball');
         break;
+      case 4:
+        setChangeShop('Back to all');
+        break;
       default:
         setChangeShop(null);
     }

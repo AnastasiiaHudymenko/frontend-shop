@@ -16,7 +16,7 @@ export const Item = styled.li`
 `;
 
 export const Image = styled.img`
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export const Wrap = styled.div`
@@ -26,7 +26,7 @@ export const Wrap = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
 `;
@@ -36,6 +36,6 @@ export const Btn = styled.button`
   border: 1px solid;
   padding: 7px 8px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
 `;
