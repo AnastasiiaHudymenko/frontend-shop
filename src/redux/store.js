@@ -1,10 +1,12 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { productsReduser } from './productSlice';
 import { basketReducer } from './basketProductSlice';
+import { ordersReduser } from './orderSlice';
 
 const rootReducer = combineReducers({
   products: productsReduser,
-  backet: basketReducer,
+  basket: basketReducer,
+  orders: ordersReduser,
 });
 
 const store = configureStore({

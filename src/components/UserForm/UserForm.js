@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { addUserData } from 'redux/operations';
-import { clearBacket } from 'redux/basketProductSlice';
+import { clearBasket } from 'redux/basketProductSlice';
+import { getTotalPrice } from '../../helpers/getTotalPrice';
 import { Form, Label, Field, NameInput, BtnSend } from './UserFrom.styled';
 
 export const UserForm = () => {
@@ -13,7 +14,7 @@ export const UserForm = () => {
     address: '',
   });
 
-  const { backet } = useSelector(state => state.backet);
+  const { basket } = useSelector(state => state.basket);
   const dispatch = useDispatch();
 
   const handleChange = event => {
@@ -26,11 +27,16 @@ export const UserForm = () => {
 
   const sendUserForm = e => {
     e.preventDefault();
-
-    const userOrder = { backet, ...formData };
+    const totalPrice = getTotalPrice(basket);
+    const userOrder = {
+      basket,
+      ...formData,
+      totalPrice,
+      orederNumber: Date.now(),
+    };
     setFormData({ name: '', email: '', phone: '', address: '' });
-    addUserData(userOrder);
-    dispatch(clearBacket());
+    dispatch(addUserData(userOrder));
+    dispatch(clearBasket());
   };
 
   return (
@@ -38,6 +44,7 @@ export const UserForm = () => {
       <Label>
         <NameInput>Name</NameInput>
         <Field
+          required
           type="text"
           name="name"
           value={formData.name}
@@ -47,6 +54,7 @@ export const UserForm = () => {
       <Label>
         <NameInput>Email</NameInput>
         <Field
+          required
           type="email"
           name="email"
           value={formData.email}
@@ -56,6 +64,7 @@ export const UserForm = () => {
       <Label>
         <NameInput>Phone</NameInput>
         <Field
+          required
           type="tel"
           name="phone"
           value={formData.phone}
@@ -65,6 +74,7 @@ export const UserForm = () => {
       <Label>
         <NameInput>Address</NameInput>
         <Field
+          required
           type="text"
           name="address"
           value={formData.address}

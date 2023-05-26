@@ -17,6 +17,8 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
+  position: sticky;
+  top: 71px;
   border: 1px solid white;
   border-radius: 8px;
   padding: 16px;
@@ -32,11 +34,15 @@ export const Item = styled.li`
   cursor: pointer;
 
   transition: all 0.5s ease;
+
   &:hover {
     color: #fc466b;
 
     box-shadow: 0px 10px 13px -7px #000000, 5px 6px 15px -9px rgba(3, 20, 36, 0);
   }
+`;
+export const FirstItem = styled.li`
+  top: 91px;
 `;
 
 export const Title = styled.h2`

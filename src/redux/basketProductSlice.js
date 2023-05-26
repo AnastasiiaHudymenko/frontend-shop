@@ -1,24 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const basketSlice = createSlice({
-  name: 'backet',
+  name: 'basket',
   initialState: {
-    backet: [],
+    basket: [],
   },
   reducers: {
     addProduct(state, { payload }) {
-      state.backet.push(payload);
+      state.basket.push(payload);
     },
 
     updateProduct(state, { payload }) {
-      state.backet = payload;
+      state.basket = payload;
     },
 
     deleteProduct(state, { payload }) {
-      state.backet = payload;
+      state.basket = payload;
     },
-    clearBacket(state, { payload }) {
-      state.backet = [];
+    clearBasket(state, { payload }) {
+      state.basket = [];
     },
   },
 });
@@ -28,6 +28,6 @@ export const {
   addMoreProduct,
   deleteProduct,
   updateProduct,
-  clearBacket,
+  clearBasket,
 } = basketSlice.actions;
 export const basketReducer = basketSlice.reducer;
