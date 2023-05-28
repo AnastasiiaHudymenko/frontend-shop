@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
-axios.defaults.baseURL = 'http://localhost:3002/';
+axios.defaults.baseURL = 'https://backend-shop-fabr.onrender.com/';
 
 export const getAllProducts = createAsyncThunk(
   'products/allProducts',

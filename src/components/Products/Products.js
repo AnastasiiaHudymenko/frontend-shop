@@ -64,7 +64,7 @@ export const Products = ({ changeShop }) => {
                 loading="lazy"
                 width={250}
                 height={250}
-                src={`http://localhost:3002/${image}`}
+                src={`https://backend-shop-fabr.onrender.com/${image}`}
                 alt={title}
               />
 

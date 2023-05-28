@@ -65,7 +65,7 @@ export const OrderList = () => {
                 loading="lazy"
                 width={180}
                 height={120}
-                src={`http://localhost:3002/${image}`}
+                src={`https://backend-shop-fabr.onrender.com/${image}`}
                 alt={title}
               />
               <WrapContent>
