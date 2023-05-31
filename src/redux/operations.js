@@ -11,7 +11,7 @@ export const getAllProducts = createAsyncThunk(
 
       return res.data;
     } catch (e) {
-      console.log(e);
+      toast.warn(e.response.data.message);
       return thunkAPI.rejectWithValue(e.response.data.message);
     }
   }
