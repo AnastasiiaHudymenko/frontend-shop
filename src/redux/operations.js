@@ -29,7 +29,7 @@ export const addUserData = createAsyncThunk(
 
       return res.data;
     } catch (e) {
-      toast.warn(e.message);
+      toast.warn(e.response.data.message);
       return thunkAPI.rejectWithValue(e.response.data.message);
     }
   }
