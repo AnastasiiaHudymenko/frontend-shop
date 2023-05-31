@@ -31,6 +31,7 @@ export const Item = styled.li`
 
 export const Image = styled.img`
   border-radius: 9px;
+  object-fit: cover;
 `;
 
 export const WrapContent = styled.div`
